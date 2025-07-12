@@ -1,0 +1,68 @@
+patch:
+  # "switches/@0/reset": 1 # emmmmm # make global ascii force true ?????? seems not?
+
+  # # grammar: zh-hans-t-huayu-v7-bgw
+  translator/contextual_suggestions: true
+  # translator/max_homophones: 7
+  # translator/max_homographs: 7
+
+  # melt_eng/comment_format: []
+
+  # speller/algebra/+: 
+  #   # zh、ch、sh
+  #   - derive/([zcs])h(ao)$/h$1$2/  # hzi → zhi ; add ao
+  #   # ia
+  #   - derive/([qjx])ia$/$1ai/  # qai → qia
+  #   # an
+  #   - derive/([wrtypsdfghklzcbnm])an$/$1na/  # dna → dan
+  #   # en
+  #   - derive/([wrpsdfghklzcbnm])en$/$1ne/  # rne → ren
+  #   # in
+  #   - derive/([qypjlxbnm])in$/$1ni/  # qni → qin
+  #   # un
+  #   - derive/([qrtysdghjklzxc])un$/$1nu/  # qnu → qun
+  #   # ian
+  #   - derive/([qtpdjlxbnm])ian$/$1ain/
+  #   # - derive/([qtpdjlxbnm])iao$/$1oia/ #???
+  #   - derive/([qtpdjlxbnm])iao$/i$1ao/
+
+  #   # ai
+  #   - derive/^([bcdlmnpstz])ai$/$1ia/  # wia → wai ; original only wghk
+
+  #   # iang
+  #   - derive/([qjlxn])iang$/$1iagn/
+
+  #   # ing
+  #   - derive/([qtypdjlxbnm])ing$/i$1ng/
+    
+  # key_binder/bindings/+:
+  #   - {accept: "Control+shift+space", select: japanese, when: always}
+
+  # editor/bindings:
+  #   Shift+Return: confirm	 # shuang!
+
+  # engine/processors/@before 0: lua_processor@wtf
+  # engine/filters/+:
+  #   - lua_filter@is_in_user_dict
+  # is_in_user_dict: true
+
+  custom_phrase/user_dict: custom_phrase_private
+  
+  # recognizer/patterns/rime123: "^rime[0-9]+$"
+  # recognizer/patterns/LETTERS: "^[A-Z]+[0-9]+$"
+  # recognizer/patterns/rimeime: "^rimeime[-_.0-9]*$"
+
+  editor:
+    bindings:
+      space: confirm                        # 空格键：上屏候选项
+      Return: commit_raw_input              # 回车键：上屏原始输入
+      Shift+Return: commit_raw_input              # 回车键：上屏原始输入
+      Control+Return: commit_script_text    # Ctrl+回车键：上屏变换后输入（经过 preedit_format 转换的）
+      Control+Shift+Return: commit_comment  # Ctrl+Shift+回车键：上屏 comment
+      BackSpace: revert                     # 退格键：向前删除（撤消上次输入）
+      Delete: delete                        # Delete 键：向后删除
+      Control+BackSpace: back_syllable      # Ctrl+退格键：删除一个音节
+      Control+Delete: delete_candidate      # Ctrl+Delete键：删除或降权候选项
+      Escape: cancel                        # Esc 键：取消输入
+  
+  punctuator/digit_separators: "."

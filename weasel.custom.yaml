@@ -1,0 +1,33 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.17.0
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Mon May 19 19:26:23 2025"
+  rime_version: 1.13.1
+patch:
+  app_options:
+    Code.exe: {ascii_mode: true}
+    FoxitPDFEditor.exe: {ascii_mode: false}
+    GitHubDesktop.exe: {ascii_mode: true}
+    cmd.exe: {ascii_mode: true}
+    conhost.exe: {ascii_mode: true}
+    ditto.exe: {ascii_mode: true}
+    eudic.exe: {ascii_mode: true}
+    everything.exe: {ascii_mode: true}
+    explorer.exe: {ascii_mode: true}
+    mobaxterm.exe: {ascii_mode: true}
+    mottynew.exe: {ascii_mode: true}
+    notepad.exe: {ascii_mode: false}
+    onenote.exe: {ascii_mode: false}
+    wechat.exe: {ascii_mode: false}
+    wechatappex.exe: {ascii_mode: false}
+    windowsterminal.exe: {ascii_mode: true}
+    winword.exe: {ascii_mode: false}
+  global_ascii: false
+  preset_color_schemes:
+    purity_of_form_custom: {author: "雨過之後、佛振", back_color: 0x545554, border_color: 0x545554, candidate_text_color: 0xEEEEEE, comment_text_color: 0x808080, hilited_candidate_back_color: 0xE3E3E3, hilited_candidate_border_color: 0xE3E3E3, hilited_candidate_label_color: 0x4C4C4C, hilited_candidate_text_color: 0x000000, hilited_comment_text_color: 0x808080, hilited_text_color: 0xEEEEEE, label_color: 0xBBBBBB, name: "純粹的形式／Purity of Form Custom", shadow_color: 0xb4000000, text_color: 0x808080}
+  "style/color_scheme": purity_of_form_custom
+  # "style/comment_font_point": 10
+  # "style/font_point": 12
+  # "style/horizontal": false
+  # "style/label_font_point": 12
